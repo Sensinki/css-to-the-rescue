@@ -1,0 +1,128 @@
+/* RESETTING */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button,
+summary {
+    cursor: pointer;
+}
+
+/* CUSTOM PROPERTIES */
+:root {
+    /* colors */
+    --white: white;
+    --black: black;
+}
+
+/* hidden h1 */
+main > h1 {
+    /* https://www.a11yproject.com/posts/how-to-hide-content/ */
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+
+    /* position: absolute; */
+    /* left:-9999em; */
+}
+
+/* retro tv */
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > article {
+    display: grid;
+    gap: 1em;
+    align-self: center;
+
+    width: 80%;
+    height: 60em;
+
+    /* backup color */
+    background-color: saddlebrown;
+
+    /* https://codepen.io/jkantner/pen/ErQNQW?editors=1100 */
+    background-image: radial-gradient(10em 0.4em at 8em 0.8em, #fff, #fff0), radial-gradient(10em 0.4em at 20em 0.8em, #fff, #fff0),
+        radial-gradient(10em 0.4em at 36em 0.8em, #fff, #fff0), radial-gradient(14em 0.8em at 6em 2em, #fff 50%, #fff0),
+        radial-gradient(55em 0.4em at 50% 2em, #fff3, #fff0), linear-gradient(#0000, #0004), radial-gradient(12em 0.4em at 32em 2em, #fff, #fff0),
+        url(https://i.ibb.co/rwcYp69/vintage-tv-texture.jpg);
+    border-radius: 0.75em 0.75em 0.75em 0.75em / 3em 3em 0.75em 0.75em;
+    box-shadow: 0 -1em 0.75em #ba816c7f inset;
+}
+
+article section:nth-of-type(1) {
+    /* aspect-ratio: 4/3; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article section:nth-of-type(1) video {
+    width: 90%;
+    height: auto;
+
+    /* STYLE LATER */
+    border: #410303b7 1em;
+    border-style: solid;
+    border-radius: 3em;
+}
+
+article > section:nth-of-type(2) {
+    background-color: brown;
+    height: 20vh;
+}
+
+@media screen and (width > 786px) {
+  main > article {
+    background-image: radial-gradient(10em 0.4em at 8em 0.8em, #fff, #fff0), radial-gradient(10em 0.4em at 20em 0.8em, #fff, #fff0),
+        radial-gradient(10em 0.4em at 36em 0.8em, #fff, #fff0), radial-gradient(14em 0.8em at 6em 2em, #fff 50%, #fff0),
+        radial-gradient(55em 0.4em at 50% 2em, #fff3, #fff0), linear-gradient(#0000, #0004), radial-gradient(12em 0.4em at 32em 2em, #fff, #fff0), url(#);
+  }
+    article {
+        grid-template-columns: 1fr 10em;
+    }
+
+    article section:nth-of-type(2) {
+        height: auto;
+    }
+}
+
+@media (width > 987px) {
+    main > article {
+        grid-template-columns: 1fr;
+        max-width: 100em;
+        height: auto;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    /* article section:nth-of-type(1) {
+    } */
+
+    article section:nth-of-type(2) {
+        position: fixed;
+        right: 5em;
+        bottom: 5em;
+        width: 10em;
+        height: 20em;
+    }
+
+    article section:nth-of-type(1) video {
+        max-width: 90em;
+        height: auto;
+    }
+}
