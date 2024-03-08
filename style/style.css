@@ -44,9 +44,10 @@ main {
     align-items: center;
 }
 
+/* tv */
 main > article {
     display: grid;
-    gap: 1em;
+    gap: 1.5em;
     align-self: center;
 
     width: 80%;
@@ -64,6 +65,7 @@ main > article {
     box-shadow: 0 -1em 0.75em #ba816c7f inset;
 }
 
+/* channels */
 article section:nth-of-type(1) {
     /* aspect-ratio: 4/3; */
     display: flex;
@@ -81,48 +83,71 @@ article section:nth-of-type(1) video {
     border-radius: 3em;
 }
 
+/* remote */
 article > section:nth-of-type(2) {
-    background-color: brown;
+    /* background-color: brown; */
     height: 20vh;
 }
 
 @media screen and (width > 786px) {
-  main > article {
-    background-image: radial-gradient(10em 0.4em at 8em 0.8em, #fff, #fff0), radial-gradient(10em 0.4em at 20em 0.8em, #fff, #fff0),
-        radial-gradient(10em 0.4em at 36em 0.8em, #fff, #fff0), radial-gradient(14em 0.8em at 6em 2em, #fff 50%, #fff0),
-        radial-gradient(55em 0.4em at 50% 2em, #fff3, #fff0), linear-gradient(#0000, #0004), radial-gradient(12em 0.4em at 32em 2em, #fff, #fff0), url(#);
-  }
+    /* tv */
+    main > article {
+        width: 70vw;
+        height: 50vh;
+        padding: 1em;
+
+        background-image: radial-gradient(10em 0.4em at 8em 0.8em, #fff, #fff0), radial-gradient(10em 0.4em at 20em 0.8em, #fff, #fff0),
+            radial-gradient(10em 0.4em at 36em 0.8em, #fff, #fff0), radial-gradient(14em 0.8em at 6em 2em, #fff 50%, #fff0),
+            radial-gradient(55em 0.4em at 50% 2em, #fff3, #fff0), linear-gradient(#0000, #0004), radial-gradient(12em 0.4em at 32em 2em, #fff, #fff0),
+            url(https://i.ibb.co/rwcYp69/vintage-tv-texture.jpg);
+    }
+
     article {
         grid-template-columns: 1fr 10em;
     }
 
-    article section:nth-of-type(2) {
-        height: auto;
-    }
-}
-
-@media (width > 987px) {
-    main > article {
-        grid-template-columns: 1fr;
-        max-width: 100em;
-        height: auto;
-        padding-top: 3em;
-        padding-bottom: 3em;
-    }
-
-    /* article section:nth-of-type(1) {
-    } */
-
-    article section:nth-of-type(2) {
-        position: fixed;
-        right: 5em;
-        bottom: 5em;
-        width: 10em;
-        height: 20em;
-    }
-
+    /* channels */
     article section:nth-of-type(1) video {
-        max-width: 90em;
+        width: 100%;
+    }
+
+    /* remote */
+    article section:nth-of-type(2) {
         height: auto;
+    }
+
+    @media (width > 987px) {
+        /* tv */
+        main > article {
+            grid-template-columns: 1fr;
+            max-width: 100em;
+            height: auto;
+            padding-top: 3em;
+            padding-bottom: 3em;
+
+            background-image: radial-gradient(10em 0.4em at 8em 0.8em, #fff, #fff0), radial-gradient(10em 0.4em at 20em 0.8em, #fff, #fff0),
+                radial-gradient(10em 0.4em at 36em 0.8em, #fff, #fff0), radial-gradient(14em 0.8em at 6em 2em, #fff 50%, #fff0),
+                radial-gradient(55em 0.4em at 50% 2em, #fff3, #fff0), linear-gradient(#0000, #0004), radial-gradient(12em 0.4em at 32em 2em, #fff, #fff0),
+                url(https://i.ibb.co/rwcYp69/vintage-tv-texture.jpg);
+            /* border-radius: 0.75em 0.75em 0.75em 0.75em / 3em 3em 0.75em 0.75em; */
+            box-shadow: 0 -1em 0.75em #ba816c7f inset;
+        }
+
+        /* channels */
+        /* article section:nth-of-type(1) { */
+        /* } */
+        article section:nth-of-type(1) video {
+            max-width: 100em;
+            height: auto;
+        }
+
+        /* remote */
+        article section:nth-of-type(2) {
+            position: fixed;
+            right: 5em;
+            bottom: 5em;
+            width: 10em;
+            height: 20em;
+        }
     }
 }
