@@ -126,11 +126,15 @@ Ik kan wel wat leuke ideeën bedenken, maar misschien een beetje ver van realism
 Eigenlijk was ik aan het begin van de week in de war over hoe ik precies moest beginnen, maar het duurde niet lang en ik ging aan de slag. Dit waren de problemen waar ik mee worstelde en hoe ik ze heb opgelost:
 - Ten eerste, omdat ik voor elke tv-stijl een ander ontwerp moest maken, controleerde ik de html-elementen bij elke stap terwijl ik ze maakte. Om deze kleine moeilijkheid op te lossen, gebruikte ik de commentaarfunctie van html, zodat ik gemakkelijk kon zien welke stap van de structuur ik aan het doen was.
 - Ten tweede, duurde het even voordat ik me realiseerde dat het niet mogelijk is om het volume van de video alleen met css te verhogen of verlagen. Met hulp van Sanne, ontdekte ik dat het niet meer mogelijk is maar vroeger wel. Helaas heb ik dit probleem nog niet opgelost. Ik ben nog steeds op zoek naar nieuwe ideeën.
- 
+
+## Voortganggesprek 2
+In eerste instantie plaatste ik een <p> element in de <li> om te schetsen. Dankzij de feedback die ik kreeg, realiseerde ik me dat het beter zou zijn om in plaats daarvan het <input type="radio"> element te gebruiken en de kanalen op deze manier te wijzigen.
+Verder kreeg ik inspiratie van mijn vrienden. Het was een nuttig gesprek om het project in mijn hoofd te realiseren.
+
 ### Wat ben ik van plan volgende week te doen?
 
-- Helemaal responsief
-- Remote styling
+- Helemaam responsief
+- Styling van de afstandsbediening
 - Kanalen werkend krijgen
 - Nieuwe idee vinden in plaats van volume
 
