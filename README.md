@@ -1,6 +1,9 @@
 # CSS TO THE RESCUE 
 
-Voor het vak CSS to the Rescue moeten wij een opdracht maken waar je alleen css mag gebruiken. We kregen de keuze uit verschillende opdrachten, ik heb uiteindelijk gekozen voor de opdracht 'controle panel' te maken.
+Voor het vak CSS to the Rescue moeten wij een opdracht maken waar alleen css mag gebruikt worden. We kregen de keuze uit verschillende opdrachten, ik heb uiteindelijk gekozen voor de opdracht 'controle panel' te maken.
+
+## WEEK 1 
+In de eerste week moesten we na het kiezen van een case een idee genereren. Daarna moesten we een begin maken met het idee dat we hadden gekozen. Je kunt hieronder volgen wat ik heb gedaan :) 
 
 ## 🎨 Het Idee
 
@@ -30,3 +33,108 @@ Dit is de middel grootte scherm die ik ga gebruiken.
 ### Desktop
 <img src="/assets/images/wiki/n-desktop.png" alt="retro nieuwe desktop" height="400px">
 Dit is de nieuwe tv style die ik ga gebruiken als mijn grootste scherm. Omdat het groot is, zijn er veel ruimte en gebruiker moet afstandsbediening gebruiken.
+
+## WEEK 2
+Deze week ben ik bezig geweest met semantiek van html en styling van css. Ik probeer verschillende versies van mijn retro tv na te maken. Het is nog steeds niet perfect responsive wat ik tot nu toe heb maar ik heb de uitlijnen om het te bereiken.
+
+### Hoe ziet mijn html eruit?
+
+```
+
+<body>
+    <main>
+        <!-- display hidden -->
+        <h1>Retro TV</h1>
+        <!-- TV -->
+        <article>
+            <!-- tv channels -->
+            <section>
+                <!-- don't forget to add 'autoplay' -->
+                <video autoplay controls muted loop
+                    src="./assets/videos/Rick Astley - Never Gonna Give You Up (Official Music Video).mp4">
+                    <source src="/assets/videos/Rick Astley - Never Gonna Give You Up (Official Music Video).mp4"
+                        type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+
+            <!-- remote -->
+            <section>
+                <!-- on/off button -->
+                <section>
+                    <label for="onoff">ON/OFF</label>
+                    <input type="checkbox">
+                </section>
+
+                <!-- channel numbers -->
+                <section>
+                    <ul>
+                        <!-- p WEG -->
+                        <li>
+                            <input type="radio" name="channel">1
+                        </li>
+                        <li>
+                            <input type="radio" name="channel">2
+                        </li>
+                        <li>
+                            <input type="radio" name="channel">3
+                        </li>
+                        <li>
+                            <input type="radio" name="channel">4
+                        </li>
+                        <li>
+                            <input type="radio" name="channel">5
+                        </li>
+                        <li>
+                            <input type="radio" name="channel">6
+                        </li>
+                        <li>
+                            <input type="radio" name="channel">7
+                        </li>
+                        <li>
+                            <input type="radio" name="channel">8
+                        </li>
+                        <li>
+                            <input type="radio" name="channel">9
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- volume -->
+                <section>  
+                    <label for="volume">VOLUME</label>
+                    <input type="range">
+                </section>
+            </section>
+        </article>
+        <!-- TV foots -->
+        <span></span>
+        <span></span>
+    </main>
+    <!-- table? -->
+    <footer></footer>
+</body>
+
+```
+
+Ik dacht dat ik dit html-formulier niet ga veranderen. Maar aan het eind van de week realiseerde ik me dat het onmogelijk is om de volumefunctie zonder js te doen. Een paar jaar geleden was dit mogelijk in chrome en chromium gebaseerde browsers, maar nu is het niet meer mogelijk. Dus ik zal een ander idee bedenken om die functie te vervangen. 
+
+Ik kan wel wat leuke ideeën bedenken, maar misschien een beetje ver van realisme. Bijvoorbeeld, de omgeving verandert volledig na het klikken op een knop, of dag- en nachtmode, of de antennes van de TV bewegen. Ik heb hier nog niet over nagedacht, maar het zal een van de dingen zijn waar ik volgende week over na zal denken. 
+
+### Waar had ik moeite mee deze week?
+
+Eigenlijk was ik aan het begin van de week in de war over hoe ik precies moest beginnen, maar het duurde niet lang en ik ging aan de slag. Dit waren de problemen waar ik mee worstelde en hoe ik ze heb opgelost:
+- Ten eerste, omdat ik voor elke tv-stijl een ander ontwerp moest maken, controleerde ik de html-elementen bij elke stap terwijl ik ze maakte. Om deze kleine moeilijkheid op te lossen, gebruikte ik de commentaarfunctie van html, zodat ik gemakkelijk kon zien welke stap van de structuur ik aan het doen was.
+- Ten tweede, duurde het even voordat ik me realiseerde dat het niet mogelijk is om het volume van de video alleen met css te verhogen of verlagen. Met hulp van Sanne, ontdekte ik dat het niet meer mogelijk is maar vroeger wel. Helaas heb ik dit probleem nog niet opgelost. Ik ben nog steeds op zoek naar nieuwe ideeën.
+ 
+### Wat ben ik van plan volgende week te doen?
+
+- Helemaal responsief
+- Remote styling
+- Kanalen werkend krijgen
+- Nieuwe idee vinden in plaats van volume
+
+
+
+
+
