@@ -74,6 +74,7 @@ article > section:nth-of-type(1) {
     place-items: end center;
     position: relative;
     padding: 2em 2em 0;
+    grid-area: 1/1;
 }
 
 article > section:nth-of-type(1) div {
@@ -132,6 +133,53 @@ article > span:nth-of-type(2) {
 article > span:nth-of-type(2):hover {
     animation: crazy-right 3s ease-in-out infinite alternate;
 }
+
+/* GLITCH ANIMATION START */
+article:has(span:nth-of-type(2):hover) > section:nth-of-type(1) {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-image: repeating-conic-gradient(#0900fc 0% 25%, #fc01fc 0% 50%, #000003 0 75%, #0bf70e 0 100%);
+    background-size: 10px 10px;
+    background-origin: center;
+    animation: glitch 0.05s linear infinite alternate;
+    border-radius: 3em;
+    border: #2b1313b7 1em;
+}
+
+@keyframes glitch {
+    10% {
+        background-size: 500px 20px;
+    }
+    20% {
+        background-size: 10px 450px;
+    }
+    30% {
+        background-size: 40px 800px;
+    }
+    40% {
+        background-size: 120px 75px;
+    }
+    50% {
+        background-size: 1000px 30px;
+    }
+    60% {
+        background-size: 10px 125px;
+    }
+    70% {
+        background-size: 100px 20px;
+    }
+    80% {
+        background-size: 50px 750px;
+    }
+    90% {
+        background-size: 30px 250px;
+    }
+    100% {
+        background-size: 400px 60px;
+    }
+}
+/* GLITCH ANIMATION END */
 
 /* remote */
 article > section:nth-of-type(2) {
@@ -359,9 +407,8 @@ article > section:nth-of-type(2) section:nth-of-type(3) {
     }
 
     /* channels */
-    article > section:nth-of-type(1) {
+    article > section:nth-of-type(1) div {
         padding: 1em 0em 0;
-        grid-area: 1/1;
     }
 
     article section:nth-of-type(1) video {
