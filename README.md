@@ -128,15 +128,34 @@ Eigenlijk was ik aan het begin van de week in de war over hoe ik precies moest b
 - Ten tweede, duurde het even voordat ik me realiseerde dat het niet mogelijk is om het volume van de video alleen met css te verhogen of verlagen. Met hulp van Sanne, ontdekte ik dat het niet meer mogelijk is maar vroeger wel. Helaas heb ik dit probleem nog niet opgelost. Ik ben nog steeds op zoek naar nieuwe ideeën.
 
 ## Voortganggesprek 2
-In eerste instantie plaatste ik een <p> element in de <li> om te schetsen. Dankzij de feedback die ik kreeg, realiseerde ik me dat het beter zou zijn om in plaats daarvan het <input type="radio"> element te gebruiken en de kanalen op deze manier te wijzigen.
+In eerste instantie plaatste ik een ```<p>``` element in de ```<li>``` om te schetsen. Dankzij de feedback die ik kreeg, realiseerde ik me dat het beter zou zijn om in plaats daarvan het ```<input type="radio">``` element te gebruiken en de kanalen op deze manier te wijzigen.
 Verder kreeg ik inspiratie van mijn vrienden. Het was een nuttig gesprek om het project in mijn hoofd te realiseren.
 
 ### Wat ben ik van plan volgende week te doen?
 
-- Helemaam responsief
+- Helemaal responsief
 - Styling van de afstandsbediening
 - Kanalen werkend krijgen
 - Nieuwe idee vinden in plaats van volume
+
+## WEEK 3
+Deze week ben ik bezig geweest met css. Ik heb paar animaties toegevoegd en tv aan/uit effect werkend gekregen. Ik heb een nieuwe idee gevonden en die uitgewerkt. Het glitch idee nog niet helemaal af maar ik ben hiermee bezig. Het tv heeft nu perfect responsiveness. 
+
+### Waar had ik moeite mee deze week?
+- Ik had moeite mee met glitch effect te creeren
+- 
+
+## Voortganggesprek 3
+
+### Wat ben ik van plan volgende week te doen?
+- em en px veranderen naar rem
+- Styling van de afstandsbediening
+- Glitch effect verbeteren
+- Knop stylingen
+- Passende titel maken
+- Kanalen werkend krijgen
+- (misschien) container queries vorr afstandsbediening   ?
+  
 
 
 
