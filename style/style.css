@@ -22,39 +22,54 @@ summary {
     --on-off: sienna;
 }
 
-/* VRAAG AAN HET SANNE */
+/* TITEL */
 h1 {
     text-decoration: none;
     text-transform: uppercase;
     position: relative;
-    margin: 0;
-    letter-spacing: 5px;
-    animation: glitch 1s infinite;
+    margin: 1rem;
+    letter-spacing: 0.75rem;
+
+    background-position: center;
+    background-image: -webkit-linear-gradient(transparent, transparent), repeating-conic-gradient(#ffffff 0% 25%, #454145 0% 50%, #000003 0 75%, #6c5757 0 100%);
+    background-size: 5px 5px;
+    background-origin: center;
+    animation: glitchTitel 0.05s linear infinite alternate;
+
+    /* background-image: url(/assets/images/tv-kapot.gif); */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* background-image: -webkit-linear-gradient(transparent, transparent), url(/assets/images/tv-kapot.gif); */
+    /* animation: glitchText 1s infinite; */
+
+    &::before,
+    &::after {
+        display: block;
+        content: attr(data-glitch);
+        text-transform: uppercase;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.8;
+    }
+
+    &::after {
+        color: #f0f;
+        z-index: -2;
+        animation: glitchText 0.5s cubic-bezier(0.25, 0.5, 0.45, 0.99) both infinite;
+    }
+    &::before {
+        color: #5e5e5e;
+        z-index: -1;
+        animation: glitchText 0.5s cubic-bezier(0.25, 0.5, 0.45, 0.99) reverse both infinite;
+    }
 }
-h1::before,
-h1::after {
-    display: block;
-    content: attr(data-glitch);
-    text-transform: uppercase;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0.8;
-}
-h1::after {
-    color: #f0f;
-    z-index: -2;
-    animation: glitch 0.3s ease-in-out reverse infinite;
-}
-h1::before {
-    color: #0ff;
-    z-index: -1;
-    animation: glitch 0.3s ease infinite;
+@keyframes glitchTitel {
 }
 
-@keyframes glitch {
+@keyframes glitchText {
     0% {
         transform: translate(0);
     }
@@ -74,29 +89,6 @@ h1::before {
         transform: translate(0);
     }
 }
-
-/* @keyframes glitch {
-    0% {
-        transform: translate(0);
-    }
-    20% {
-        transform: translate(-5px, 5px);
-    }
-    40% {
-        transform: translate(-5px, -5px);
-    }
-    60% {
-        transform: translate(5px, 5px);
-    }
-    80% {
-        transform: translate(5px, -5px);
-    }
-    to {
-        transform: translate(0);
-    }
-} */
-
-/* VRAAG AAN HET SANNE */
 
 /* hidden h2 */
 main h2 {
@@ -213,17 +205,7 @@ article > span:nth-of-type(2):hover {
 }
 
 /* GLITCH ANIMATION START */
-article:has(span:nth-of-type(2):hover) > section:nth-of-type(1) div {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-image: repeating-conic-gradient(#0900fc 0% 25%, #fc01fc 0% 50%, #000003 0 75%, #0bf70e 0 100%);
-    background-size: 10px 10px;
-    background-origin: center;
-    animation: glitch 0.05s linear infinite alternate;
-    border-radius: 3em;
-}
-
+article:has(span:nth-of-type(2):hover) > section:nth-of-type(1) div,
 article:has(span:nth-of-type(1):hover) > section:nth-of-type(1) div {
     width: 100%;
     height: 100%;
@@ -233,6 +215,7 @@ article:has(span:nth-of-type(1):hover) > section:nth-of-type(1) div {
     background-origin: center;
     animation: glitch 0.05s linear infinite alternate;
     border-radius: 3em;
+    z-index: 2;
 }
 
 /* remote */
@@ -249,9 +232,23 @@ article > section:nth-of-type(2) {
 article > section:nth-of-type(2) section:nth-of-type(1) {
     width: 5em;
     height: 5em;
+    cursor: pointer;
+
     background-color: var(--on-off);
     border-radius: 50%;
+    border: 2px solid #160e02;
+    box-shadow: #160e02 4px 4px 0 0;
+    display: inline-block;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
     z-index: 10;
+}
+
+article > section:nth-of-type(2) section:nth-of-type(1):active {
+    box-shadow: #2b1b02 2px 2px 0 0;
+    transform: translate(2px, 2px);
 }
 
 article > section:nth-of-type(2) section:nth-of-type(1) label {
@@ -345,12 +342,26 @@ article > section:nth-of-type(2) section:nth-of-type(2) ul li input {
     border: 5px solid #25130b;
     background-color: var(--on-off);
     border-radius: 50%;
+
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition-duration: 300ms;
+
+    border: 2px solid #160e02;
+    box-shadow: #160e02 4px 4px 0 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    z-index: 10;
+}
+
+article > section:nth-of-type(2) section:nth-of-type(2) ul li input:active {
+    box-shadow: #2b1b02 2px 2px 0 0;
+    transform: translate(2px, 2px);
 }
 
 article > section:nth-of-type(2) section:nth-of-type(2) ul li input::before {
@@ -363,40 +374,88 @@ article > section:nth-of-type(2) section:nth-of-type(2) label input:checked {
     border: 5px solid green;
 }
 
+video {
+    visibility: hidden;
+}
+
 article > section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(1) input::before {
     content: "1";
+}
+article:has(section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(1) input:checked) video:nth-of-type(1) {
+    /* background-color: #0900fc; */
+    visibility: visible;
 }
 
 article > section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(2) input::before {
     content: "2";
 }
 
+article:has(section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(2) input:checked) video:nth-of-type(2) {
+    /* background-color: #0900fc; */
+    visibility: visible;
+}
+
 article > section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(3) input::before {
     content: "3";
+}
+
+article:has(section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(3) input:checked) video:nth-of-type(3) {
+    /* background-color: #0900fc; */
+    visibility: visible;
 }
 
 article > section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(4) input::before {
     content: "4";
 }
 
+article:has(section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(4) input:checked) video:nth-of-type(4) {
+    /* background-color: #0900fc; */
+    visibility: visible;
+}
+
 article > section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(5) input::before {
     content: "5";
+}
+
+article:has(section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(5) input:checked) video:nth-of-type(5) {
+    /* background-color: #0900fc; */
+    visibility: visible;
 }
 
 article > section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(6) input::before {
     content: "6";
 }
 
+article:has(section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(6) input:checked) video:nth-of-type(6) {
+    /* background-color: #0900fc; */
+    visibility: visible;
+}
+
 article > section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(7) input::before {
     content: "7";
+}
+
+article:has(section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(7) input:checked) video:nth-of-type(7) {
+    /* background-color: #0900fc; */
+    visibility: visible;
 }
 
 article > section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(8) input::before {
     content: "8";
 }
 
+article:has(section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(8) input:checked) video:nth-of-type(8) {
+    /* background-color: #0900fc; */
+    visibility: visible;
+}
+
 article > section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(9) input::before {
     content: "9";
+}
+
+article:has(section:nth-of-type(2) section:nth-of-type(2) ul li:nth-child(9) input:checked) video:nth-of-type(9) {
+    /* background-color: #0900fc; */
+    visibility: visible;
 }
 
 article > section:nth-of-type(2) section:nth-of-type(3) {
@@ -635,6 +694,39 @@ article > section:nth-of-type(2) section:nth-of-type(3) {
 }
 
 @keyframes glitch {
+    10% {
+        background-size: 500px 20px;
+    }
+    20% {
+        background-size: 10px 450px;
+    }
+    30% {
+        background-size: 40px 800px;
+    }
+    40% {
+        background-size: 120px 75px;
+    }
+    50% {
+        background-size: 1000px 30px;
+    }
+    60% {
+        background-size: 10px 125px;
+    }
+    70% {
+        background-size: 100px 20px;
+    }
+    80% {
+        background-size: 50px 750px;
+    }
+    90% {
+        background-size: 30px 250px;
+    }
+    100% {
+        background-size: 400px 60px;
+    }
+}
+
+@keyframes glitchTitel {
     10% {
         background-size: 500px 20px;
     }
