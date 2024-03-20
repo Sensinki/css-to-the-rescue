@@ -142,8 +142,7 @@ Verder kreeg ik inspiratie van mijn vrienden. Het was een nuttig gesprek om het 
 Deze week ben ik bezig geweest met css. Ik heb paar animaties toegevoegd en tv aan/uit effect werkend gekregen. Ik heb een nieuwe idee gevonden en die uitgewerkt. Het glitch idee nog niet helemaal af maar ik ben hiermee bezig. Het tv heeft nu perfect responsiveness. 
 
 ### Waar had ik moeite mee deze week?
-- Ik had moeite mee met glitch effect te creeren
-- 
+- Ik had moeite mee met glitch effect te creeren. Maar uiteindelijk lukt het wel en ik heb twee verschillende (voor titel en tv) glitch effect gemaakt. 
 
 ## Voortganggesprek 3
 
@@ -154,9 +153,17 @@ Deze week ben ik bezig geweest met css. Ik heb paar animaties toegevoegd en tv a
 - Knop stylingen
 - Passende titel maken
 - Kanalen werkend krijgen
-- (misschien) container queries vorr afstandsbediening   ?
-  
+- Alles in de @layers zetten volgens prioriteit  
 
+## WEEK 4
+
+Deze week is de deadlineweek. Vorige week heb ik alle taken afgerond die nog ontbraken en voor de deadline afgerond moesten worden. Wat ik moeilijk vond, was eigenlijk het nesten. Het was erg moeilijk om alle code die ik eerder had geschreven te verbeteren. De volgende keer zou het beter zijn als ik alles vanaf het begin doe met nesting. 
+
+## REFLECTIE
+
+Dankzij deze cursus heb ik geleerd dat je zoveel dingen kunt doen met css. Ik had nooit gedacht dat ik zoveel dingen kan doen met css. Vooral Julia Miocene, die onze klas kwam bezoeken, heeft me hier erg over verbaasd. 
+
+Dankzij dit project heb ik het gebruik van ```:has``` en ```:not``` geleerd en ik weet zeker dat ik ze in de toekomst zal gebruiken. Aan de andere kant heeft dit project me geholpen om de moeite die ik meestal heb met kleurverlopen (gradients) en animaties te verminderen en om praktischer te worden.
 
 
 
