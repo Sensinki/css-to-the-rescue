@@ -245,6 +245,7 @@
             justify-content: space-evenly;
             align-items: center;
             padding-bottom: 1rem;
+            box-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
 
             /* on/off */
             & section:nth-of-type(1) {
